@@ -15,7 +15,6 @@ namespace ASL
 #define pi 3.141592653589793238462643383279502884197169399375106
 #define e  2.718281828459045235360287471352662497757247093699960
 
-#pragma region forward class declarations
 class Matrix;
 class TempVector;
 class TempMatrix;
@@ -23,7 +22,6 @@ class ReferenceList;
 class Intermediate1of2;
 class Intermediate2of2;
 class Intermediate1of1;
-#pragma endregion
 
 class Vector
 {
@@ -154,17 +152,17 @@ class Vector
 	friend TempVector operator / (Vector,TempVector);				//	>>
 	friend TempVector operator / (Vector,double);					//	>>
 	friend TempVector operator / (double,Vector);					//	>>
-	friend TempVector operator ^ (Vector,Vector);					// operator ^ 
+	friend TempVector operator ^ (Vector,Vector);					// operator ^
 	friend TempVector operator ^ (TempVector,Vector);				//	>>
 	friend TempVector operator ^ (Vector,TempVector);				//	>>
 	friend TempVector operator ^ (Vector,double);					//	>>
 	friend TempVector operator ^ (double,Vector);					//	>>
-	friend TempVector operator ^= (Vector,Vector);					// operator ^= 
+	friend TempVector operator ^= (Vector,Vector);					// operator ^=
 	friend TempVector operator ^= (TempVector,Vector);				//	>>
 	friend TempVector operator ^= (Vector,TempVector);				//	>>
 	friend TempVector operator ^= (Vector,double);					//	>>
 	friend TempVector operator ^= (double,Vector);					//	>>
-	friend TempVector operator % (Vector,Vector);					// operator % 
+	friend TempVector operator % (Vector,Vector);					// operator %
 	friend TempVector operator % (TempVector,Vector);				//	>>
 	friend TempVector operator % (Vector,TempVector);				//	>>
 	friend TempVector operator % (Vector,double);					//	>>
@@ -190,7 +188,7 @@ public:
 	ReferenceList operator () (TempVector);							//	>>
 	void resize(unsigned int);										// resize
 private:
-	anticast data;	
+	anticast data;
 }; // end class Vector
 
 
@@ -476,7 +474,6 @@ private:
 	anticast data;
 }; // end class TempVector
 
-#pragma region implementation notes on Matrix
 		/************************************************************************************************
 		*																								*
 		*   Matrix is internally represented as a pointer to a block of consecutive memory addresses	*
@@ -493,7 +490,6 @@ private:
 		*   was stored as a two dimentional array (double A[rows][columns]).							*
 		*																								*
 		************************************************************************************************/
-#pragma endregion
 
 class Matrix
 {
@@ -616,17 +612,17 @@ class Matrix
 	friend TempMatrix operator / (Matrix,TempMatrix);				//	>>
 	friend TempMatrix operator / (Matrix,double);					//	>>
 	friend TempMatrix operator / (double,Matrix);					//	>>
-	friend TempMatrix operator ^ (Matrix,Matrix);					// operator ^ 
+	friend TempMatrix operator ^ (Matrix,Matrix);					// operator ^
 	friend TempMatrix operator ^ (TempMatrix,Matrix);				//	>>
 	friend TempMatrix operator ^ (Matrix,TempMatrix);				//	>>
 	friend TempMatrix operator ^ (Matrix,double);					//	>>
 	friend TempMatrix operator ^ (double,Matrix);					//	>>
-	friend TempMatrix operator ^= (Matrix,Matrix);					// operator ^= 
+	friend TempMatrix operator ^= (Matrix,Matrix);					// operator ^=
 	friend TempMatrix operator ^= (TempMatrix,Matrix);				//	>>
 	friend TempMatrix operator ^= (Matrix,TempMatrix);				//	>>
 	friend TempMatrix operator ^= (Matrix,double);					//	>>
 	friend TempMatrix operator ^= (double,Matrix);					//	>>
-	friend TempMatrix operator % (Matrix,Matrix);					// operator % 
+	friend TempMatrix operator % (Matrix,Matrix);					// operator %
 	friend TempMatrix operator % (TempMatrix,Matrix);				//	>>
 	friend TempMatrix operator % (Matrix,TempMatrix);				//	>>
 	friend TempMatrix operator % (Matrix,double);					//	>>
@@ -659,7 +655,7 @@ private:
 
 class TempMatrix
 {
-	friend class Matrix;	
+	friend class Matrix;
 	friend std::ostream &operator << (std::ostream &,TempMatrix);	// operator <<
 	friend TempMatrix rand(unsigned int,unsigned int);				// rand
 	friend TempMatrix randn(unsigned int,unsigned int);				// randn			//to do
@@ -867,7 +863,7 @@ class TempMatrix
 	friend TempMatrix operator / (double,Matrix);					//	>>
 	friend TempMatrix operator / (TempMatrix,double);				//	>>
 	friend TempMatrix operator / (double,TempMatrix);				//	>>
-	friend TempMatrix operator ^ (Matrix,Matrix);					// operator ^ 
+	friend TempMatrix operator ^ (Matrix,Matrix);					// operator ^
 	friend TempMatrix operator ^ (TempMatrix,Matrix);				//	>>
 	friend TempMatrix operator ^ (Matrix,TempMatrix);				//	>>
 	friend TempMatrix operator ^ (TempMatrix,TempMatrix);			//	>>
@@ -875,7 +871,7 @@ class TempMatrix
 	friend TempMatrix operator ^ (double,Matrix);					//	>>
 	friend TempMatrix operator ^ (TempMatrix,double);				//	>>
 	friend TempMatrix operator ^ (double,TempMatrix);				//	>>
-	friend TempMatrix operator ^= (Matrix,Matrix);					// operator ^= 
+	friend TempMatrix operator ^= (Matrix,Matrix);					// operator ^=
 	friend TempMatrix operator ^= (TempMatrix,Matrix);				//	>>
 	friend TempMatrix operator ^= (Matrix,TempMatrix);				//	>>
 	friend TempMatrix operator ^= (TempMatrix,TempMatrix);			//	>>
@@ -883,7 +879,7 @@ class TempMatrix
 	friend TempMatrix operator ^= (double,Matrix);					//	>>
 	friend TempMatrix operator ^= (TempMatrix,double);				//	>>
 	friend TempMatrix operator ^= (double,TempMatrix);				//	>>
-	friend TempMatrix operator % (Matrix,Matrix);					// operator % 
+	friend TempMatrix operator % (Matrix,Matrix);					// operator %
 	friend TempMatrix operator % (TempMatrix,Matrix);				//	>>
 	friend TempMatrix operator % (Matrix,TempMatrix);				//	>>
 	friend TempMatrix operator % (TempMatrix,TempMatrix);			//	>>
@@ -927,7 +923,7 @@ private:
 void tic();															// tic
 void toc();															// toc
 
-	
+
 class ReferenceList	// no relation with & references. it just "refers" to things.
 {				// implemented as a null-terminated list of pointers.
 	friend class Vector;

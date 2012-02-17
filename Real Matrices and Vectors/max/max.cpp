@@ -2,7 +2,6 @@
 using namespace ASL;
 
 
-#pragma region Vector & Vector
 
 // vectors v and u are assumed to be of the same size.
 TempVector ASL::max(Vector v, Vector u)	// overloaded version 1
@@ -77,8 +76,6 @@ TempVector ASL::max(TempVector v, TempVector u)	// overloaded version 4
 	return v;
 } // end function max overloaded version 4
 
-#pragma endregion
-#pragma region Vector & Scalar
 
 TempVector ASL::max(double x, Vector v)	// overloaded version 5
 {
@@ -91,8 +88,8 @@ TempVector ASL::max(double x, Vector v)	// overloaded version 5
 	*p.ui++ = c;		// save the size of the new TempVector.
 
 	while(c--)		// for each element of v.
-		*p.d++ = ASL::Utility::max(x , *v.data.d) , ++v.data.d;	
-	
+		*p.d++ = ASL::Utility::max(x , *v.data.d) , ++v.data.d;
+
 	v.data.v = 0;	// prevents the destractor from deallocating v's memory.
 	return u;
 } // end function max overloaded version 5
@@ -109,8 +106,8 @@ TempVector ASL::max(Vector v, double x)	// overloaded version 6
 	*p.ui++ = c;		// save the size of the new TempVector.
 
 	while(c--)		// for each element of v.
-		*p.d++ = ASL::Utility::max(*v.data.d++ , x);	
-	
+		*p.d++ = ASL::Utility::max(*v.data.d++ , x);
+
 	v.data.v = 0;	// prevents the destractor from deallocating v's memory.
 	return u;
 } // end function max overloaded version 6
@@ -145,8 +142,6 @@ TempVector ASL::max(TempVector v, double x)	// overloaded version 8
 	return v;
 } // end function max overloaded version 8
 
-#pragma endregion
-#pragma region Matrix & Matrix
 
 // matrices A and B are assumed to be of the same size.
 TempMatrix ASL::max(Matrix A, Matrix B)	// overloaded version 9
@@ -227,8 +222,6 @@ TempMatrix ASL::max(TempMatrix A, TempMatrix B)	// overloaded version 12
 	return A;
 } // end function max overloaded version 12
 
-#pragma endregion
-#pragma region Matrix & Scalar
 
 TempMatrix ASL::max(double x, Matrix A)	// overloaded version 13
 {
@@ -242,8 +235,8 @@ TempMatrix ASL::max(double x, Matrix A)	// overloaded version 13
 	*p.ui++ = *A.data.ui++;	// store the # of rows of A in B.
 
 	while(c--)		// for each element of A.
-		*p.d++ = ASL::Utility::max(x , *A.data.d) , ++A.data.d;	
-	
+		*p.d++ = ASL::Utility::max(x , *A.data.d) , ++A.data.d;
+
 	A.data.v = 0;	// prevents the destractor from deallocating A's memory.
 	return B;
 } // end function max overloaded version 13
@@ -261,8 +254,8 @@ TempMatrix ASL::max(Matrix A, double x)	// overloaded version 14
 	*p.ui++ = *A.data.ui++;	// store the # of rows of A in B.
 
 	while(c--)		// for each element of A.
-		*p.d++ = ASL::Utility::max(*A.data.d++ , x);	
-	
+		*p.d++ = ASL::Utility::max(*A.data.d++ , x);
+
 	A.data.v = 0;	// prevents the destractor from deallocating A's memory.
 	return B;
 } // end function max overloaded version 14
@@ -299,8 +292,6 @@ TempMatrix ASL::max(TempMatrix A, double x)	// overloaded version 16
 	return A;
 } // end function max overloaded version 16
 
-#pragma endregion
-#pragma region Vector
 
 // doesn't work on vectors with 0 elements.
 double ASL::max(Vector v) // overloaded version 17
@@ -339,8 +330,6 @@ double ASL::max(TempVector v) // overloaded version 18
 	return accumulator;
 } // end function max overloaded version 18
 
-#pragma endregion
-#pragma region Matrix
 
 // doesn't work on matrices with 0 elements.
 TempVector ASL::max(Matrix A , unsigned int dim) // overloaded version 19
@@ -459,4 +448,3 @@ TempVector ASL::max(TempMatrix A , unsigned int dim) // overloaded version 20
 	return v;
 } // end function max overloaded version 20
 
-#pragma endregion

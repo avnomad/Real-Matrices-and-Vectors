@@ -2,7 +2,6 @@
 using namespace ASL;
 
 
-#pragma region Vector & Vector
 
 // vectors v and u are assumed to be of the same size.
 TempVector ASL::min(Vector v, Vector u)	// overloaded version 1
@@ -77,8 +76,6 @@ TempVector ASL::min(TempVector v, TempVector u)	// overloaded version 4
 	return v;
 } // end function min overloaded version 4
 
-#pragma endregion
-#pragma region Vector & Scalar
 
 TempVector ASL::min(double x, Vector v)	// overloaded version 5
 {
@@ -91,8 +88,8 @@ TempVector ASL::min(double x, Vector v)	// overloaded version 5
 	*p.ui++ = c;		// save the size of the new TempVector.
 
 	while(c--)		// for each element of v.
-		*p.d++ = ASL::Utility::min(x , *v.data.d) , ++v.data.d;	
-	
+		*p.d++ = ASL::Utility::min(x , *v.data.d) , ++v.data.d;
+
 	v.data.v = 0;	// prevents the destractor from deallocating v's memory.
 	return u;
 } // end function min overloaded version 5
@@ -109,8 +106,8 @@ TempVector ASL::min(Vector v, double x)	// overloaded version 6
 	*p.ui++ = c;		// save the size of the new TempVector.
 
 	while(c--)		// for each element of v.
-		*p.d++ = ASL::Utility::min(*v.data.d++ , x);	
-	
+		*p.d++ = ASL::Utility::min(*v.data.d++ , x);
+
 	v.data.v = 0;	// prevents the destractor from deallocating v's memory.
 	return u;
 } // end function min overloaded version 6
@@ -145,8 +142,6 @@ TempVector ASL::min(TempVector v, double x)	// overloaded version 8
 	return v;
 } // end function min overloaded version 8
 
-#pragma endregion
-#pragma region Matrix & Matrix
 
 // matrices A and B are assumed to be of the same size.
 TempMatrix ASL::min(Matrix A, Matrix B)	// overloaded version 9
@@ -227,8 +222,6 @@ TempMatrix ASL::min(TempMatrix A, TempMatrix B)	// overloaded version 12
 	return A;
 } // end function min overloaded version 12
 
-#pragma endregion
-#pragma region Matrix & Scalar
 
 TempMatrix ASL::min(double x, Matrix A)	// overloaded version 13
 {
@@ -242,8 +235,8 @@ TempMatrix ASL::min(double x, Matrix A)	// overloaded version 13
 	*p.ui++ = *A.data.ui++;	// store the # of rows of A in B.
 
 	while(c--)		// for each element of A.
-		*p.d++ = ASL::Utility::min(x , *A.data.d) , ++A.data.d;	
-	
+		*p.d++ = ASL::Utility::min(x , *A.data.d) , ++A.data.d;
+
 	A.data.v = 0;	// prevents the destractor from deallocating A's memory.
 	return B;
 } // end function min overloaded version 13
@@ -261,8 +254,8 @@ TempMatrix ASL::min(Matrix A, double x)	// overloaded version 14
 	*p.ui++ = *A.data.ui++;	// store the # of rows of A in B.
 
 	while(c--)		// for each element of A.
-		*p.d++ = ASL::Utility::min(*A.data.d++ , x);	
-	
+		*p.d++ = ASL::Utility::min(*A.data.d++ , x);
+
 	A.data.v = 0;	// prevents the destractor from deallocating A's memory.
 	return B;
 } // end function min overloaded version 14
@@ -299,8 +292,6 @@ TempMatrix ASL::min(TempMatrix A, double x)	// overloaded version 16
 	return A;
 } // end function min overloaded version 16
 
-#pragma endregion
-#pragma region Vector
 
 // doesn't work on vectors with 0 elements.
 double ASL::min(Vector v) // overloaded version 17
@@ -339,8 +330,6 @@ double ASL::min(TempVector v) // overloaded version 18
 	return accumulator;
 } // end function min overloaded version 18
 
-#pragma endregion
-#pragma region Matrix
 
 // doesn't work on matrices with 0 elements.
 TempVector ASL::min(Matrix A , unsigned int dim) // overloaded version 19
@@ -459,4 +448,3 @@ TempVector ASL::min(TempMatrix A , unsigned int dim) // overloaded version 20
 	return v;
 } // end function min overloaded version 20
 
-#pragma endregion

@@ -41,8 +41,6 @@ double ASL::any(TempVector v) // overloaded version 2
 	return accumulator;
 } // end function any overloaded version 2
 
-#pragma endregion
-#pragma region Matrix
 
 // doesn't work on matrices with 0 elements.
 TempVector ASL::any(Matrix A , char dim) // overloaded version 3
@@ -161,4 +159,3 @@ TempVector ASL::any(TempMatrix A , char dim) // overloaded version 4
 	return v;
 } // end function any overloaded version 4
 
-#pragma endregion

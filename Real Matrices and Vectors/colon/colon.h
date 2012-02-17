@@ -6,12 +6,10 @@
 namespace ASL
 {
 
-#pragma region forward class declarations
 class Intermediate1of2;
 class Intermediate2of2;
 class Intermediate1of1;
 class TempVector;
-#pragma endregion
 
 class Colon
 {

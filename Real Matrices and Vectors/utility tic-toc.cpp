@@ -17,9 +17,9 @@ void tic(void)
 }
 
 
-void toc(void)
+void toc(std::ostream &outStream)
 {
-	std::cout<<"\nThe elapsed time equals "<<(clock() - startingTime) / (CLOCKS_PER_SEC/1000.0)<<"ms."<<std::endl;
+	outStream<<"\nThe elapsed time equals "<<(clock() - startingTime) / (CLOCKS_PER_SEC/1000.0)<<"ms."<<std::endl;
 }
 
 

@@ -16,7 +16,7 @@ TempMatrix ASL::eye(unsigned int order)
 	while(--c)
 	{
 		p.d += order;
-		*++p.d = 1;		
+		*++p.d = 1;
 	}
 
 	return A;
@@ -39,7 +39,7 @@ TempMatrix ASL::eye(unsigned int rows,unsigned int cols)
 	while(--c)
 	{
 		p.d += rows;
-		*++p.d = 1;		
+		*++p.d = 1;
 	}
 
 	return A;

@@ -77,8 +77,6 @@ TempVector ASL::operator ^ (TempVector v, TempVector u)	// overloaded version 4
 	return v;
 } // end function operator ^  overloaded version 4
 
-#pragma endregion
-#pragma region Vector & Scalar
 
 TempVector ASL::operator ^ (double x, Vector v)	// overloaded version 5
 {
@@ -91,8 +89,8 @@ TempVector ASL::operator ^ (double x, Vector v)	// overloaded version 5
 	*p.ui++ = c;		// save the size of the new TempVector.
 
 	while(c--)		// for each element of v.
-		*p.d++ = pow(x , *v.data.d) , ++v.data.d;	
-	
+		*p.d++ = pow(x , *v.data.d) , ++v.data.d;
+
 	v.data.v = 0;	// prevents the destractor from deallocating v's memory.
 	return u;
 } // end function operator ^  overloaded version 5
@@ -109,8 +107,8 @@ TempVector ASL::operator ^ (Vector v, double x)	// overloaded version 6
 	*p.ui++ = c;		// save the size of the new TempVector.
 
 	while(c--)		// for each element of v.
-		*p.d++ = pow(*v.data.d++ , x);	
-	
+		*p.d++ = pow(*v.data.d++ , x);
+
 	v.data.v = 0;	// prevents the destractor from deallocating v's memory.
 	return u;
 } // end function operator ^  overloaded version 6
@@ -145,8 +143,6 @@ TempVector ASL::operator ^ (TempVector v, double x)	// overloaded version 8
 	return v;
 } // end function operator ^  overloaded version 8
 
-#pragma endregion
-#pragma region Matrix & Matrix
 
 // matrices A and B are assumed to be of the same size.
 TempMatrix ASL::operator ^ (Matrix A, Matrix B)	// overloaded version 9
@@ -227,8 +223,6 @@ TempMatrix ASL::operator ^ (TempMatrix A, TempMatrix B)	// overloaded version 12
 	return A;
 } // end function operator ^  overloaded version 12
 
-#pragma endregion
-#pragma region Matrix & Scalar
 
 TempMatrix ASL::operator ^ (double x, Matrix A)	// overloaded version 13
 {
@@ -242,8 +236,8 @@ TempMatrix ASL::operator ^ (double x, Matrix A)	// overloaded version 13
 	*p.ui++ = *A.data.ui++;	// store the # of rows of A in B.
 
 	while(c--)		// for each element of A.
-		*p.d++ = pow(x , *A.data.d) , ++A.data.d;	
-	
+		*p.d++ = pow(x , *A.data.d) , ++A.data.d;
+
 	A.data.v = 0;	// prevents the destractor from deallocating A's memory.
 	return B;
 } // end function operator ^  overloaded version 13
@@ -261,8 +255,8 @@ TempMatrix ASL::operator ^ (Matrix A, double x)	// overloaded version 14
 	*p.ui++ = *A.data.ui++;	// store the # of rows of A in B.
 
 	while(c--)		// for each element of A.
-		*p.d++ = pow(*A.data.d++ , x);	
-	
+		*p.d++ = pow(*A.data.d++ , x);
+
 	A.data.v = 0;	// prevents the destractor from deallocating A's memory.
 	return B;
 } // end function operator ^  overloaded version 14

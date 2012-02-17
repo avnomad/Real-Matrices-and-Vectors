@@ -447,7 +447,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\tic-toc.cpp"
+				RelativePath=".\utility tic-toc.cpp"
 				>
 			</File>
 		</Filter>

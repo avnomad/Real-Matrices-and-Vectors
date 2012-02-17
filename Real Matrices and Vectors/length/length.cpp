@@ -48,8 +48,8 @@ unsigned int ASL::length(TempMatrix A)
 		************************************************************************/
 
 unsigned int ASL::length(ReferenceList r)
-{											// 
-	register unsigned int c = 0;			//  
+{											//
+	register unsigned int c = 0;			//
 	register double **p;
 
 	p = r.data;	// set p at the beginning of r.
