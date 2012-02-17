@@ -13,225 +13,248 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{bf2ea4cd-08a9-4fa4-a426-d4490e17127c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Notes">
+      <UniqueIdentifier>{2b75ffd7-510d-4191-b863-a7f302d1cc5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{f0027b1d-7a1a-441f-a95c-d351621bcb9f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="abs\abs.cpp">
+    <ClCompile Include="hand-written code\assignment operator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="acos\acos.cpp">
+    <ClCompile Include="hand-written code\colon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="addition operator\addition operator.cpp">
+    <ClCompile Include="hand-written code\diag.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="all\all.cpp">
+    <ClCompile Include="hand-written code\eye.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="any\any.cpp">
+    <ClCompile Include="hand-written code\function operator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="asin\asin.cpp">
+    <ClCompile Include="hand-written code\hilb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="assignment operator\assignment operator.cpp">
+    <ClCompile Include="hand-written code\length.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="atan\atan.cpp">
+    <ClCompile Include="hand-written code\linspace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bitwise and operator\bitwise and operator.cpp">
+    <ClCompile Include="hand-written code\Matrix constractor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bitwise or operator\bitwise or operator.cpp">
+    <ClCompile Include="hand-written code\Matrix destractor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bitwise Xor assignment operator\bitwise Xor assignment operator.cpp">
+    <ClCompile Include="hand-written code\ones.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bitwise Xor operator\bitwise Xor operator.cpp">
+    <ClCompile Include="hand-written code\polyval.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ceil\ceil.cpp">
+    <ClCompile Include="hand-written code\rand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="colon\colon.cpp">
+    <ClCompile Include="hand-written code\resize.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cos\cos.cpp">
+    <ClCompile Include="hand-written code\size.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cosh\cosh.cpp">
+    <ClCompile Include="hand-written code\stream extraction operator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="diag\diag.cpp">
+    <ClCompile Include="hand-written code\stream insertion operator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="division assignment operator\division assignment operator.cpp">
+    <ClCompile Include="hand-written code\tic-toc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="division operator\division operator.cpp">
+    <ClCompile Include="hand-written code\toMatrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="equality operator\equality operator.cpp">
+    <ClCompile Include="hand-written code\transpose.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="exp\exp.cpp">
+    <ClCompile Include="hand-written code\Vector constractor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="eye\eye.cpp">
+    <ClCompile Include="hand-written code\Vector destractor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="floor\floor.cpp">
+    <ClCompile Include="hand-written code\zeros.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="function operator\function operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\abs.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="greater than operator\greater than operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\acos.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="greater than or equal operator\greater than or equal operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\all.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="hilb\hilb.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\any.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="length\length.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\asin.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="less than operator\less than operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\atan.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="less than or equal operator\less than or equal operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\bitwise and operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="linspace\linspace.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\bitwise or operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="log\log.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\bitwise Xor assignment operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="log10\log10.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\bitwise Xor operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="logical and operator\logical and operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\ceil.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="logical not operator\logical not operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\cos.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="logical or operator\logical or operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\cosh.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="Matrix constractor\Matrix constractor.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\division assignment operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="Matrix destractor\Matrix destractor.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\division operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="max\max.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\equality operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="min\min.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\exp.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="modulus operator\modulus operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\floor.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiplication assignment operator\multiplication assignment operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\greater than operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiplication operator\multiplication operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\greater than or equal operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="ones\ones.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\less than operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="polyval\polyval.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\less than or equal operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="prod\prod.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\log.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="rand\rand.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\log10.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="resize\resize.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\logical and operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="sin\sin.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\logical not operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="sinh\sinh.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\logical or operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="size\size.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\max.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="sqrt\sqrt.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\min.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="stream extraction operator\stream extraction operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\modulus operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="stream insertion operator\stream insertion operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\multiplication operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="subtraction operator\subtraction operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\prod.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="sum\sum.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\sin.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="tan\tan.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\sinh.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="tanh\tanh.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\sqrt.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="tic-toc\tic-toc.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\subtraction operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="toMatrix\toMatrix.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\sum.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="transpose\transpose.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\tan.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="unary minus operator\unary minus operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\tanh.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="unary plus operator\unary plus operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\unary minus operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="unequality operator\unequality operator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\unary plus operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="vector constractor\Vector constractor.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\unequality operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="vector destructor\Vector destractor.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include=".\main.cpp">
+      <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="zeros\zeros.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\addition operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\main.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="generated code\multiplication assignment operator.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="anticast.h">
+    <ClInclude Include="hand-written code\utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="colon\colon.h">
+    <ClInclude Include="hand-written code\colon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Real Matrices and Vectors.h">
+    <ClInclude Include="hand-written code\anticast.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="utility.h">
+    <ClInclude Include="hand-written code\Real Matrices and Vectors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="notes\assignment operator.txt">
+      <Filter>Notes</Filter>
+    </None>
+    <None Include="notes\division assignment operator.txt">
+      <Filter>Notes</Filter>
+    </None>
+    <None Include="notes\elementwise operations.txt">
+      <Filter>Notes</Filter>
+    </None>
+    <None Include="notes\multiplication assignment operator.txt">
+      <Filter>Notes</Filter>
+    </None>
   </ItemGroup>
 </Project>
