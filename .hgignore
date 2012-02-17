@@ -2,3 +2,7 @@ syntax: regexp
 Debug/*
 Release/*
 ipch/*
+syntax: glob
+Real Matrices and Vectors.opensdf
+Real Matrices and Vectors.sdf
+Real Matrices and Vectors.suo

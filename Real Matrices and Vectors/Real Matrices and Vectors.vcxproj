@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ABD979B0-911C-4FEF-80ED-973A9E3E1F4E}</ProjectGuid>
+    <RootNamespace>RealMatricesandVectors</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(PropSheetDir)\optimization flags.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="abs\abs.cpp" />
+    <ClCompile Include="acos\acos.cpp" />
+    <ClCompile Include="addition operator\addition operator.cpp" />
+    <ClCompile Include="all\all.cpp" />
+    <ClCompile Include="any\any.cpp" />
+    <ClCompile Include="asin\asin.cpp" />
+    <ClCompile Include="assignment operator\assignment operator.cpp" />
+    <ClCompile Include="atan\atan.cpp" />
+    <ClCompile Include="bitwise and operator\bitwise and operator.cpp" />
+    <ClCompile Include="bitwise or operator\bitwise or operator.cpp" />
+    <ClCompile Include="bitwise Xor assignment operator\bitwise Xor assignment operator.cpp" />
+    <ClCompile Include="bitwise Xor operator\bitwise Xor operator.cpp" />
+    <ClCompile Include="ceil\ceil.cpp" />
+    <ClCompile Include="colon\colon.cpp" />
+    <ClCompile Include="cos\cos.cpp" />
+    <ClCompile Include="cosh\cosh.cpp" />
+    <ClCompile Include="diag\diag.cpp" />
+    <ClCompile Include="division assignment operator\division assignment operator.cpp" />
+    <ClCompile Include="division operator\division operator.cpp" />
+    <ClCompile Include="equality operator\equality operator.cpp" />
+    <ClCompile Include="exp\exp.cpp" />
+    <ClCompile Include="eye\eye.cpp" />
+    <ClCompile Include="floor\floor.cpp" />
+    <ClCompile Include="function operator\function operator.cpp" />
+    <ClCompile Include="greater than operator\greater than operator.cpp" />
+    <ClCompile Include="greater than or equal operator\greater than or equal operator.cpp" />
+    <ClCompile Include="hilb\hilb.cpp" />
+    <ClCompile Include="length\length.cpp" />
+    <ClCompile Include="less than operator\less than operator.cpp" />
+    <ClCompile Include="less than or equal operator\less than or equal operator.cpp" />
+    <ClCompile Include="linspace\linspace.cpp" />
+    <ClCompile Include="log\log.cpp" />
+    <ClCompile Include="log10\log10.cpp" />
+    <ClCompile Include="logical and operator\logical and operator.cpp" />
+    <ClCompile Include="logical not operator\logical not operator.cpp" />
+    <ClCompile Include="logical or operator\logical or operator.cpp" />
+    <ClCompile Include="Matrix constractor\Matrix constractor.cpp" />
+    <ClCompile Include="Matrix destractor\Matrix destractor.cpp" />
+    <ClCompile Include="max\max.cpp" />
+    <ClCompile Include="min\min.cpp" />
+    <ClCompile Include="modulus operator\modulus operator.cpp" />
+    <ClCompile Include="multiplication assignment operator\multiplication assignment operator.cpp" />
+    <ClCompile Include="multiplication operator\multiplication operator.cpp" />
+    <ClCompile Include="ones\ones.cpp" />
+    <ClCompile Include="polyval\polyval.cpp" />
+    <ClCompile Include="prod\prod.cpp" />
+    <ClCompile Include="rand\rand.cpp" />
+    <ClCompile Include="resize\resize.cpp" />
+    <ClCompile Include="sin\sin.cpp" />
+    <ClCompile Include="sinh\sinh.cpp" />
+    <ClCompile Include="size\size.cpp" />
+    <ClCompile Include="sqrt\sqrt.cpp" />
+    <ClCompile Include="stream extraction operator\stream extraction operator.cpp" />
+    <ClCompile Include="stream insertion operator\stream insertion operator.cpp" />
+    <ClCompile Include="subtraction operator\subtraction operator.cpp" />
+    <ClCompile Include="sum\sum.cpp" />
+    <ClCompile Include="tan\tan.cpp" />
+    <ClCompile Include="tanh\tanh.cpp" />
+    <ClCompile Include="main\test.cpp" />
+    <ClCompile Include="tic-toc\tic-toc.cpp" />
+    <ClCompile Include="toMatrix\toMatrix.cpp" />
+    <ClCompile Include="transpose\transpose.cpp" />
+    <ClCompile Include="unary minus operator\unary minus operator.cpp" />
+    <ClCompile Include="unary plus operator\unary plus operator.cpp" />
+    <ClCompile Include="unequality operator\unequality operator.cpp" />
+    <ClCompile Include="vector constractor\Vector constractor.cpp" />
+    <ClCompile Include="vector destructor\Vector destractor.cpp" />
+    <ClCompile Include="zeros\zeros.cpp" />
+    <ClCompile Include="utility tic-toc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="anticast.h" />
+    <ClInclude Include="colon\colon.h" />
+    <ClInclude Include="Real Matrices and Vectors.h" />
+    <ClInclude Include="utility.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
