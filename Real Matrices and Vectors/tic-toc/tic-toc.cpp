@@ -1,15 +1,24 @@
-#include "../Real Matrices and Vectors.h"
+//#include "../Real Matrices and Vectors.h"
+#include <ctime>
+#include <iostream>
 
-#include <time.h>
+namespace ASL
+{
+
 
 static clock_t startingTime;
 
-void ASL::tic(void)
+
+void tic(void)
 {
 	startingTime = ::clock();
 }
 
-void ASL::toc(void)
+
+void toc(std::ostream &outStream)
 {
-	std::cout<<"\nThe elapsed time equals "<<(clock() - startingTime) / (CLOCKS_PER_SEC/1000.0)<<"ms."<<std::endl;
+	outStream<<"\nThe elapsed time equals "<<(clock() - startingTime) / (CLOCKS_PER_SEC/1000.0)<<"ms."<<std::endl;
 }
+
+
+} // end namespace ASL

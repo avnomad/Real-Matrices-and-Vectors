@@ -189,9 +189,6 @@
     <ClCompile Include="tanh\tanh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="tic-toc\tic-toc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -219,7 +216,7 @@
     <ClCompile Include="zeros\zeros.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="utility tic-toc.cpp">
+    <ClCompile Include="main\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -921,7 +921,7 @@ private:
 
 
 void tic();															// tic
-void toc();															// toc
+void toc(std::ostream &outStream = std::cout);						// toc
 
 
 class ReferenceList	// no relation with & references. it just "refers" to things.

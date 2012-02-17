@@ -21,6 +21,10 @@ int main()
 	u(u<0) = -(C/1/sum(u<0));
 	cout<<v<<u;
 
+	tic();
+	toc(cout);
+	tic();
+	toc();
 	
 
 	system("PAUSE");

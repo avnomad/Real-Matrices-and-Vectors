@@ -152,7 +152,7 @@
     <ClCompile Include="sum\sum.cpp" />
     <ClCompile Include="tan\tan.cpp" />
     <ClCompile Include="tanh\tanh.cpp" />
-    <ClCompile Include="main\test.cpp" />
+    <ClCompile Include="main\main.cpp" />
     <ClCompile Include="tic-toc\tic-toc.cpp" />
     <ClCompile Include="toMatrix\toMatrix.cpp" />
     <ClCompile Include="transpose\transpose.cpp" />
@@ -162,7 +162,6 @@
     <ClCompile Include="vector constractor\Vector constractor.cpp" />
     <ClCompile Include="vector destructor\Vector destractor.cpp" />
     <ClCompile Include="zeros\zeros.cpp" />
-    <ClCompile Include="utility tic-toc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="anticast.h" />

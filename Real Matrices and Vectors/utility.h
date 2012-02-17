@@ -8,9 +8,6 @@ namespace ASL
 namespace Utility
 {
 
-void tic();										// tic
-void toc(std::ostream &outStream = std::cout);	// toc
-
 
 template<typename ArgType>						// max
 inline ArgType max(ArgType x , ArgType y)
