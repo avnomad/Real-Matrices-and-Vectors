@@ -1,0 +1,2 @@
+the /= operator is used in place of the ./ matlab operator as the later is not a C++ operator.
+Unfotrunately the /= operator associates from right to left witch may cause confusion and subtle logic errors.

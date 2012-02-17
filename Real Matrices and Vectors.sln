@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Real Matrices and Vectors", "Real Matrices and Vectors\Real Matrices and Vectors.vcproj", "{ABD979B0-911C-4FEF-80ED-973A9E3E1F4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABD979B0-911C-4FEF-80ED-973A9E3E1F4E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ABD979B0-911C-4FEF-80ED-973A9E3E1F4E}.Debug|Win32.Build.0 = Debug|Win32
+		{ABD979B0-911C-4FEF-80ED-973A9E3E1F4E}.Release|Win32.ActiveCfg = Release|Win32
+		{ABD979B0-911C-4FEF-80ED-973A9E3E1F4E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

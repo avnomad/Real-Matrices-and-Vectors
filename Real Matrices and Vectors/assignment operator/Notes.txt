@@ -1,0 +1,2 @@
+Self assignment is considered an error. Besides that it should work in any case, including but not limited to cases like A = exp(A);
+If for some reason you want to use self assignment you can always write A = +A;!

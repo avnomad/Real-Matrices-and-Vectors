@@ -1,0 +1,3 @@
+C++ operators '*=', '/=', '^=' are used in place of the matlab operators '.*', './', '.^' respectively as the later are not
+operloadable C++ operator. Caution should be used though as these operators associate from right to left which may 
+cause confusion and subtle logic errors.
