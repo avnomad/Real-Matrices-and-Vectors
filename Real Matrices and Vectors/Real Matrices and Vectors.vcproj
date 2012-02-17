@@ -446,6 +446,10 @@
 				RelativePath=".\zeros\zeros.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\tic-toc.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
