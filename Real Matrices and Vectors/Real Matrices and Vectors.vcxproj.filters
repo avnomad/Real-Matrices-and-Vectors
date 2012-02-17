@@ -22,6 +22,12 @@
     <Filter Include="Main">
       <UniqueIdentifier>{f0027b1d-7a1a-441f-a95c-d351621bcb9f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Manuscripts">
+      <UniqueIdentifier>{d9889fea-301f-41d4-8e65-5f5133e9593d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Miscellaneous">
+      <UniqueIdentifier>{c698b528-caa9-495c-a895-cdf7b4d4dd76}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hand-written code\assignment operator.cpp">
@@ -255,6 +261,15 @@
     </None>
     <None Include="notes\multiplication assignment operator.txt">
       <Filter>Notes</Filter>
+    </None>
+    <None Include="lines of code.xlsx">
+      <Filter>Miscellaneous</Filter>
+    </None>
+    <None Include="scanned manuscripts\proof attempt.jpg">
+      <Filter>Manuscripts</Filter>
+    </None>
+    <None Include="scanned manuscripts\diagram of pointer assignments.jpg">
+      <Filter>Manuscripts</Filter>
     </None>
   </ItemGroup>
 </Project>

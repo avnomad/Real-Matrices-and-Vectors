@@ -170,10 +170,13 @@
     <ClInclude Include="hand-written code\utility.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="lines of code.xlsx" />
     <None Include="notes\assignment operator.txt" />
     <None Include="notes\division assignment operator.txt" />
     <None Include="notes\elementwise operations.txt" />
     <None Include="notes\multiplication assignment operator.txt" />
+    <None Include="scanned manuscripts\proof attempt.jpg" />
+    <None Include="scanned manuscripts\diagram of pointer assignments.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
