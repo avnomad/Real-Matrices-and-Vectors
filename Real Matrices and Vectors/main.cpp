@@ -25,7 +25,8 @@ int main()
 	toc(cout);
 	tic();
 	toc();
-	
+
+	cout<<Utility::identity(2.2)<<endl;
 
 	system("PAUSE");
 	return 0;
