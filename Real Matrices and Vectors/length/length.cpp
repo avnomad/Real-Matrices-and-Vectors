@@ -22,7 +22,7 @@ unsigned int ASL::length(Matrix A)
 {
 	unsigned int c = *(A.data.ui+1); // set c to the # of rows.
 
-	c = ASL::max(c , *A.data.ui / c);
+	c = ASL::Utility::max(c , *A.data.ui / c);
 
 	A.data.v = 0 ;	// ensure that the memory of the original matrix wont be deallocated.
 	return c;
@@ -33,7 +33,7 @@ unsigned int ASL::length(TempMatrix A)
 {
 	unsigned int c = *(A.data.ui+1); // set c to the # of rows.
 
-	c = ASL::max(c , *A.data.ui / c);
+	c = ASL::Utility::max(c , *A.data.ui / c);
 
 	free(A.data.v);	// free the memory occupied by the temporary matrix.
 	return c;

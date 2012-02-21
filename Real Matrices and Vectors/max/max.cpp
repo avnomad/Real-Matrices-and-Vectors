@@ -16,7 +16,7 @@ TempVector ASL::max(Vector v, Vector u)	// overloaded version 1
 	p.v = w.data.v = malloc(sizeof(unsigned int) + c*sizeof(double));
 	*p.ui++ = c;
 	while(c--)
-		*p.d++ = ASL::max(*v.data.d++ , *u.data.d) , ++u.data.d;
+		*p.d++ = ASL::Utility::max(*v.data.d++ , *u.data.d) , ++u.data.d;
 
 	v.data.v = u.data.v = 0;
 	return w;
@@ -34,7 +34,7 @@ TempVector ASL::max(TempVector v, Vector u)	// overloaded version 2
 	++u.data.ui;
 
 	while(c--)
-		*p.d = ASL::max(*p.d , *u.data.d) , ++p.d , ++u.data.d;
+		*p.d = ASL::Utility::max(*p.d , *u.data.d) , ++p.d , ++u.data.d;
 
 	u.data.v = 0;
 	return v;
@@ -52,7 +52,7 @@ TempVector ASL::max(Vector u, TempVector v)	// overloaded version 3
 	++u.data.ui;
 
 	while(c--)
-		*p.d = ASL::max(*u.data.d++ , *p.d) , ++p.d;
+		*p.d = ASL::Utility::max(*u.data.d++ , *p.d) , ++p.d;
 
 	u.data.v = 0;
 	return v;
@@ -71,7 +71,7 @@ TempVector ASL::max(TempVector v, TempVector u)	// overloaded version 4
 	++q.ui;
 
 	while(c--)
-		*p.d = ASL::max(*p.d , *q.d) , ++p.d , ++q.d;
+		*p.d = ASL::Utility::max(*p.d , *q.d) , ++p.d , ++q.d;
 
 	free(u.data.v);
 	return v;
@@ -91,7 +91,7 @@ TempVector ASL::max(double x, Vector v)	// overloaded version 5
 	*p.ui++ = c;		// save the size of the new TempVector.
 
 	while(c--)		// for each element of v.
-		*p.d++ = ASL::max(x , *v.data.d) , ++v.data.d;	
+		*p.d++ = ASL::Utility::max(x , *v.data.d) , ++v.data.d;	
 	
 	v.data.v = 0;	// prevents the destractor from deallocating v's memory.
 	return u;
@@ -109,7 +109,7 @@ TempVector ASL::max(Vector v, double x)	// overloaded version 6
 	*p.ui++ = c;		// save the size of the new TempVector.
 
 	while(c--)		// for each element of v.
-		*p.d++ = ASL::max(*v.data.d++ , x);	
+		*p.d++ = ASL::Utility::max(*v.data.d++ , x);	
 	
 	v.data.v = 0;	// prevents the destractor from deallocating v's memory.
 	return u;
@@ -125,7 +125,7 @@ TempVector ASL::max(double x, TempVector v)	// overloaded version 7
 	c = *p.ui++;	// get the size of v.
 
 	while(c--)		// for each element of v.
-		*p.d = ASL::max(x , *p.d) , ++p.d;
+		*p.d = ASL::Utility::max(x , *p.d) , ++p.d;
 
 	return v;
 } // end function max overloaded version 7
@@ -140,7 +140,7 @@ TempVector ASL::max(TempVector v, double x)	// overloaded version 8
 	c = *p.ui++;	// get the size of v.
 
 	while(c--)		// for each element of v.
-		*p.d = ASL::max(*p.d , x) , ++p.d;
+		*p.d = ASL::Utility::max(*p.d , x) , ++p.d;
 
 	return v;
 } // end function max overloaded version 8
@@ -163,7 +163,7 @@ TempMatrix ASL::max(Matrix A, Matrix B)	// overloaded version 9
 	++B.data.ui;	// skip the # of rows of B.
 
 	while(c--)
-		*p.d++ = ASL::max(*A.data.d++ , *B.data.d) , ++B.data.d;
+		*p.d++ = ASL::Utility::max(*A.data.d++ , *B.data.d) , ++B.data.d;
 
 	A.data.v = B.data.v = 0;	// prevent the destractor from deallocating A's and B's memory.
 	return C;
@@ -182,7 +182,7 @@ TempMatrix ASL::max(TempMatrix A, Matrix B)	// overloaded version 10
 	++p.ui , ++B.data.ui;	// skip the # of rows of A and B.
 
 	while(c--)
-		*p.d = ASL::max(*p.d , *B.data.d) , ++p.d , ++B.data.d;
+		*p.d = ASL::Utility::max(*p.d , *B.data.d) , ++p.d , ++B.data.d;
 
 	B.data.v = 0;	// prevent the destractor from deallocating B's memory.
 	return A;
@@ -201,7 +201,7 @@ TempMatrix ASL::max(Matrix B, TempMatrix A)	// overloaded version 11
 	++p.ui , ++B.data.ui;	// skip the # of rows of A and B.
 
 	while(c--)
-		*p.d = ASL::max(*B.data.d++ , *p.d) , ++p.d;
+		*p.d = ASL::Utility::max(*B.data.d++ , *p.d) , ++p.d;
 
 	B.data.v = 0;
 	return A;
@@ -221,7 +221,7 @@ TempMatrix ASL::max(TempMatrix A, TempMatrix B)	// overloaded version 12
 	++p.ui , ++q.ui;	// skip the # of rows of A and B.
 
 	while(c--)
-		*p.d = ASL::max(*p.d , *q.d) , ++p.d , ++q.d;
+		*p.d = ASL::Utility::max(*p.d , *q.d) , ++p.d , ++q.d;
 
 	free(B.data.v);	// free the memory occupied by the temporary matric B.
 	return A;
@@ -242,7 +242,7 @@ TempMatrix ASL::max(double x, Matrix A)	// overloaded version 13
 	*p.ui++ = *A.data.ui++;	// store the # of rows of A in B.
 
 	while(c--)		// for each element of A.
-		*p.d++ = ASL::max(x , *A.data.d) , ++A.data.d;	
+		*p.d++ = ASL::Utility::max(x , *A.data.d) , ++A.data.d;	
 	
 	A.data.v = 0;	// prevents the destractor from deallocating A's memory.
 	return B;
@@ -261,7 +261,7 @@ TempMatrix ASL::max(Matrix A, double x)	// overloaded version 14
 	*p.ui++ = *A.data.ui++;	// store the # of rows of A in B.
 
 	while(c--)		// for each element of A.
-		*p.d++ = ASL::max(*A.data.d++ , x);	
+		*p.d++ = ASL::Utility::max(*A.data.d++ , x);	
 	
 	A.data.v = 0;	// prevents the destractor from deallocating A's memory.
 	return B;
@@ -278,7 +278,7 @@ TempMatrix ASL::max(double x, TempMatrix A)	// overloaded version 15
 	++p.ui;	// skip the # of rows of A.
 
 	while(c--)		// for each element of A.
-		*p.d = ASL::max(x , *p.d) , ++p.d;
+		*p.d = ASL::Utility::max(x , *p.d) , ++p.d;
 
 	return A;
 } // end function max overloaded version 15
@@ -294,7 +294,7 @@ TempMatrix ASL::max(TempMatrix A, double x)	// overloaded version 16
 	++p.ui;	// skip the # of rows of A.
 
 	while(c--)		// for each element of A.
-		*p.d = ASL::max(*p.d , x) , ++p.d;
+		*p.d = ASL::Utility::max(*p.d , x) , ++p.d;
 
 	return A;
 } // end function max overloaded version 16
@@ -314,7 +314,7 @@ double ASL::max(Vector v) // overloaded version 17
 
 	accumulator = *p.d;
 	while(--c)
-		accumulator = ASL::max(accumulator , *++p.d);
+		accumulator = ASL::Utility::max(accumulator , *++p.d);
 
 	v.data.v = 0;	// prevent the destractor from deallocating v's memory.
 	return accumulator;
@@ -333,7 +333,7 @@ double ASL::max(TempVector v) // overloaded version 18
 
 	accumulator = *p.d;
 	while(--c)
-		accumulator = ASL::max(accumulator , *++p.d);
+		accumulator = ASL::Utility::max(accumulator , *++p.d);
 
 	free(v.data.v);	// free v's memory.
 	return accumulator;
@@ -368,7 +368,7 @@ TempVector ASL::max(Matrix A , unsigned int dim) // overloaded version 19
 			c = reduceDimention;	// set c to the # of rows of A.
 			accumulator = *source.d;	// initialize accumulator with the first element of the current column.
 			while(--c)	// reduce the current column
-				accumulator = ASL::max(accumulator , *++source.d);
+				accumulator = ASL::Utility::max(accumulator , *++source.d);
 			*destination.d++ = accumulator;	// store the result from reducing this column in v.
 			++source.d;	// move the the next column.
 		} // end outer while
@@ -390,7 +390,7 @@ TempVector ASL::max(Matrix A , unsigned int dim) // overloaded version 19
 			c = reduceDimention;	// set c to the # of columns of A.
 			accumulator = *source.d;	// initialize accumulator with the first element of the current row.
 			while(--c)	// reduce the current row
-				accumulator = ASL::max(accumulator , *(source.d += rows));
+				accumulator = ASL::Utility::max(accumulator , *(source.d += rows));
 			*destination.d++ = accumulator;	// store the result from reducing this row in v.
 			source.d = ++row;	// move the the next row.
 		} // end outer while
@@ -427,7 +427,7 @@ TempVector ASL::max(TempMatrix A , unsigned int dim) // overloaded version 20
 			c = reduceDimention;	// set c to the # of rows of A.
 			accumulator = *source.d;	// initialize accumulator with the first element of the current column.
 			while(--c)	// reduce the current column
-				accumulator = ASL::max(accumulator , *++source.d);
+				accumulator = ASL::Utility::max(accumulator , *++source.d);
 			*destination.d++ = accumulator;	// store the result from reducing this column in v.
 			++source.d;	// move the the next column.
 		} // end outer while
@@ -449,7 +449,7 @@ TempVector ASL::max(TempMatrix A , unsigned int dim) // overloaded version 20
 			c = reduceDimention;	// set c to the # of columns of A.
 			accumulator = *source.d;	// initialize accumulator with the first element of the current row.
 			while(--c)	// reduce the current row
-				accumulator = ASL::max(accumulator , *(source.d += rows));
+				accumulator = ASL::Utility::max(accumulator , *(source.d += rows));
 			*destination.d++ = accumulator;	// store the result from reducing this row in v.
 			source.d = ++row;	// move the the next row.
 		} // end outer while

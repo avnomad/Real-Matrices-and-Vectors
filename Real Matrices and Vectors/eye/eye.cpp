@@ -34,7 +34,7 @@ TempMatrix ASL::eye(unsigned int rows,unsigned int cols)
 	p.v = A.data.v = calloc(1,2*sizeof(unsigned int) + c*sizeof(double));
 	*p.ui++ = c;
 	*p.ui++ = rows;
-	c = ASL::min(rows,cols);
+	c = ASL::Utility::min(rows,cols);
 	*p.d = 1;
 	while(--c)
 	{

@@ -14,12 +14,12 @@ TempVector ASL::diag(Matrix A , int d)
 	rows = *q.ui++;	// set rows to the # of rows of A.
 	if( d > 0 )
 	{
-		c = ASL::min(rows , c/rows - d);	// calculate the length of the diagonal.
+		c = ASL::Utility::min(rows , c/rows - d);	// calculate the length of the diagonal.
 		q.d += d*rows;	// set q at the beginning of the selected diagonal.
 	}
 	else
 	{
-		c = ASL::min(rows + d , c/rows);	// calculate the length of the diagonal.
+		c = ASL::Utility::min(rows + d , c/rows);	// calculate the length of the diagonal.
 		q.d -= d;	// set q at the beginning of the selected diagonal.
 	}
 
@@ -50,12 +50,12 @@ TempVector ASL::diag(TempMatrix A , int d)
 	rows = *q.ui++;	// set rows to the # of rows of A.
 	if( d > 0 )
 	{
-		c = ASL::min(rows , c/rows - d);	// calculate the length of the diagonal.
+		c = ASL::Utility::min(rows , c/rows - d);	// calculate the length of the diagonal.
 		q.d += d*rows;	// set q at the beginning of the selected diagonal.
 	}
 	else
 	{
-		c = ASL::min(rows + d , c/rows);	// calculate the length of the diagonal.
+		c = ASL::Utility::min(rows + d , c/rows);	// calculate the length of the diagonal.
 		q.d -= d;	// set q at the beginning of the selected diagonal.
 	}
 

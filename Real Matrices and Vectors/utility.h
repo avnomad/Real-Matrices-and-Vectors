@@ -3,7 +3,8 @@
 
 namespace ASL
 {
-
+namespace Utility
+{
 
 void tic();								// tic
 void toc();								// toc
@@ -43,6 +44,7 @@ ArgType identity(ArgType x)
 }
 
 
+} // end namespace Utility
 
 } // end namespace ASL
 
