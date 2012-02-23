@@ -17,12 +17,14 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -70,6 +72,14 @@
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <PostBuildEvent>
+      <Message>Copy static library and headers to installation directory.</Message>
+      <Command>copy /B "$(TargetPath)" "$(LibBuildInstallDir)\Static Libraries\debug $(UseDebugLibraries)\$(TargetFileName)"
+copy "$(ProjectDir)\hand-written code\Real Matrices and Vectors.h" "$(LibBuildInstallDir)\Headers\Real Matrices and Vectors.h"
+copy "$(ProjectDir)\hand-written code\anticast.h" "$(LibBuildInstallDir)\Headers\anticast.h"
+copy "$(ProjectDir)\hand-written code\colon.h" "$(LibBuildInstallDir)\Headers\colon.h"
+copy "$(ProjectDir)\hand-written code\utility.h" "$(LibBuildInstallDir)\Headers\utility.h"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -92,6 +102,16 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /B "$(TargetPath)" "$(LibBuildInstallDir)\Static Libraries\debug $(UseDebugLibraries)\$(TargetFileName)"
+copy "$(ProjectDir)\hand-written code\Real Matrices and Vectors.h" "$(LibBuildInstallDir)\Headers\Real Matrices and Vectors.h"
+copy "$(ProjectDir)\hand-written code\anticast.h" "$(LibBuildInstallDir)\Headers\anticast.h"
+copy "$(ProjectDir)\hand-written code\colon.h" "$(LibBuildInstallDir)\Headers\colon.h"
+copy "$(ProjectDir)\hand-written code\utility.h" "$(LibBuildInstallDir)\Headers\utility.h"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy static library and headers to installation directory.</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="generated code\abs.cpp" />
@@ -152,7 +172,10 @@
     <ClCompile Include="generated code\sum.cpp" />
     <ClCompile Include="generated code\tan.cpp" />
     <ClCompile Include="generated code\tanh.cpp" />
-    <ClCompile Include=".\main.cpp" />
+    <ClCompile Include=".\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="hand-written code\tic-toc.cpp" />
     <ClCompile Include="hand-written code\toMatrix.cpp" />
     <ClCompile Include="hand-written code\transpose.cpp" />
